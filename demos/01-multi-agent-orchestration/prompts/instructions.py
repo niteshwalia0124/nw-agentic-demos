@@ -31,7 +31,7 @@ _RESEARCH_PLAN_ENDS_
 
 **Task:**
 1. Search for current trends, recent news, and emerging developments.
-2. Summarise the top 3-5 findings with key insights.
+2. Summarize the top 3-5 findings with key insights.
 3. Note any important statistics or data points.
 
 Output *only* a concise summary of your trend research findings.
@@ -47,7 +47,7 @@ _RESEARCH_PLAN_ENDS_
 
 **Task:**
 1. Search for technical explanations, architectures, and best practices.
-2. Summarise the core technical concepts and how they work.
+2. Summarize the core technical concepts and how they work.
 3. Identify any important frameworks, tools, or methodologies.
 
 Output *only* a concise summary of your technical research findings.

@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤖 NW Agentic Demos
+# 🤖 Agentic Demos
 
 ### A curated showcase of production-ready Agentic AI patterns built with the Agent Development Kit (ADK)
 

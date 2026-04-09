@@ -21,7 +21,7 @@ Guidelines:
 
 writer_agent = Agent(
     name="writer_agent",
-    model="gemini-2.0-flash",
+    model="gemini-2.5-flash",
     description=(
         "Specialist agent for writing tasks. Drafts blog posts, reports, "
         "summaries, and documentation with clear structure and engaging prose."

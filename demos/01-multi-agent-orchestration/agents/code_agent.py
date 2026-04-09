@@ -21,7 +21,7 @@ Guidelines:
 
 code_agent = Agent(
     name="code_agent",
-    model="gemini-2.0-flash",
+    model="gemini-2.5-flash",
     description=(
         "Specialist agent for coding tasks. Writes clean, documented "
         "code, explains algorithms, and reviews implementations."

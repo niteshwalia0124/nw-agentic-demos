@@ -275,7 +275,7 @@ All demos use ADK's model abstraction, allowing you to swap providers by changin
 
 ```python
 # Gemini (default)
-agent = Agent(model="gemini-2.0-flash")
+agent = Agent(model="gemini-2.5-flash")
 
 # OpenAI
 agent = Agent(model="openai/gpt-4o")

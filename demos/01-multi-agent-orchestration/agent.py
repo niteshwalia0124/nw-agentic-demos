@@ -44,7 +44,7 @@ Guidelines:
 
 root_agent = Agent(
     name="orchestrator",
-    model="gemini-2.0-flash",
+    model="gemini-2.5-flash",
     description=(
         "Orchestrator agent that decomposes complex tasks and delegates "
         "to specialist agents (research, code, writer), then aggregates "

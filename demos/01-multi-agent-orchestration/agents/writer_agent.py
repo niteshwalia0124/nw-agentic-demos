@@ -1,30 +1,56 @@
-"""Writer Agent — drafts documents, blog posts, and reports."""
+"""Writer agents — creative and technical content drafters.
 
-from google.adk.agents import Agent
-
-WRITER_AGENT_INSTRUCTION = """You are a Writer Agent specialising in drafting clear, engaging documents.
-
-Your capabilities:
-- Write blog posts, reports, summaries, and documentation.
-- Structure content with headings, bullet points, and logical flow.
-- Adapt tone and style to the target audience.
-- Integrate technical details from research and code into readable prose.
-
-Guidelines:
-1. Start with a clear outline before writing.
-2. Use headings and sub-headings to organise content.
-3. Keep paragraphs concise and focused.
-4. When incorporating code, use proper formatting and explain what it does.
-5. End with a conclusion or key takeaways when appropriate.
-6. Proofread for clarity, grammar, and consistency.
+Two writers with different ``temperature`` settings run in parallel via a
+``ParallelAgent``.  The creative writer aims for engagement while the
+technical writer focuses on accuracy.  Both write to separate state keys
+so the downstream synthesiser can merge them.
 """
 
-writer_agent = Agent(
-    name="writer_agent",
+from google.adk.agents import LlmAgent, ParallelAgent
+from google.genai import types
+
+from ..prompts.instructions import (
+    CREATIVE_WRITER_INSTRUCTION,
+    TECHNICAL_WRITER_INSTRUCTION,
+)
+
+# --- Configuration ---
+MAX_WORDS = 300
+
+# --- State Keys ---
+KEY_CREATIVE_DRAFT = "creative_draft"
+KEY_TECHNICAL_DRAFT = "technical_draft"
+
+# --- Individual Writer Agents ---
+
+creative_writer = LlmAgent(
+    name="CreativeWriter",
     model="gemini-2.5-flash",
+    generate_content_config=types.GenerateContentConfig(temperature=0.8),
+    instruction=CREATIVE_WRITER_INSTRUCTION.format(max_words=MAX_WORDS),
     description=(
-        "Specialist agent for writing tasks. Drafts blog posts, reports, "
-        "summaries, and documentation with clear structure and engaging prose."
+        "Writes an engaging, reader-friendly content draft using "
+        "vivid analogies and storytelling. High temperature for creativity."
     ),
-    instruction=WRITER_AGENT_INSTRUCTION,
+    output_key=KEY_CREATIVE_DRAFT,
+)
+
+technical_writer = LlmAgent(
+    name="TechnicalWriter",
+    model="gemini-2.5-flash",
+    generate_content_config=types.GenerateContentConfig(temperature=0.3),
+    instruction=TECHNICAL_WRITER_INSTRUCTION.format(max_words=MAX_WORDS),
+    description=(
+        "Writes a precise, detailed technical content draft. "
+        "Low temperature for accuracy and consistency."
+    ),
+    output_key=KEY_TECHNICAL_DRAFT,
+)
+
+# --- Parallel Writing Phase ---
+
+parallel_writers = ParallelAgent(
+    name="ParallelWriters",
+    sub_agents=[creative_writer, technical_writer],
+    description="Runs creative and technical writers in parallel.",
 )

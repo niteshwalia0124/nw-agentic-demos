@@ -1,4 +1,15 @@
-"""Web search tool using SerpAPI for the Research Agent."""
+"""Web search utility (legacy).
+
+This module is retained for backward compatibility.  The recommended
+approach is to use ADK's built-in ``google_search`` tool which is
+configured in the research agents::
+
+    from google.adk.tools import google_search
+
+If you need a standalone search function (e.g. for testing without
+a Gemini API key), you can still use the ``web_search`` function
+below with a SerpAPI key.
+"""
 
 import os
 from typing import Any
@@ -6,7 +17,6 @@ from typing import Any
 import requests
 
 # Type alias for the search result structure.
-# Each result dict contains: {"status": str, "results": list[dict], "error_message"?: str}
 SearchResult = dict[str, Any]
 
 
@@ -25,19 +35,11 @@ def web_search(query: str) -> SearchResult:
         return {
             "status": "error",
             "error_message": (
-                "SERPAPI_KEY not set. Please add it to your .env file. "
-                "Returning a simulated result for demo purposes."
+                "SERPAPI_KEY not set. The primary search tool is ADK's "
+                "built-in google_search — this legacy function requires "
+                "a SerpAPI key."
             ),
-            "results": [
-                {
-                    "title": f"Simulated result for: {query}",
-                    "link": "https://example.com",
-                    "snippet": (
-                        f"This is a simulated search result for '{query}'. "
-                        "Set SERPAPI_KEY in your .env to get real results."
-                    ),
-                }
-            ],
+            "results": [],
         }
 
     try:

@@ -1,0 +1,23 @@
+{
+  "eval_set_id": "insurance_core",
+  "name": "Insurance Advisor Core Flows",
+  "description": "Tests basic routing capabilities of the insurance advisor.",
+  "eval_cases": [
+    {
+      "eval_id": "auto_quote_routing",
+      "conversation": [
+        {
+          "invocation_id": "inv_quote",
+          "user_content": { "parts": [{ "text": "I want a new auto insurance quote for a 35-year-old in MH. What is the process?" }] },
+          "intermediate_data": {
+            "tool_uses": [
+              { "name": "policy_agent" },
+              { "name": "risk_agent" }
+            ]
+          }
+        }
+      ],
+      "session_input": { "app_name": "insurance_advisor", "user_id": "eval_user", "state": {} }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+Policy: Comprehensive Private Car Policy
+Company: SecureLife Insurance
+
+1. Own Damage Coverage:
+- The company will indemnify the insured against loss or damage to the vehicle insured hereunder and/or its accessories whilst thereon by:
+  - Fire, explosion, self-ignition, or lightning.
+  - Burglary, housebreaking, or theft.
+  - Riot and strike.
+  - Earthquake (fire and shock damage).
+  - Flood, typhoon, hurricane, storm, tempest, inundation, cyclone, hailstorm, frost.
+  - Accidental external means.
+  - Terrorist activity.
+
+2. Towing Charges:
+- In the event of the vehicle being disabled by reason of loss or damage covered under this policy, the company will bear the reasonable cost of protection and removal to the nearest repairer, not exceeding Rs. 1,500 in respect of any one accident.
+
+3. Exclusions:
+- The company shall not be liable to make any payment in respect of:
+  - Consequential loss, normal wear and tear, degradation.
+  - Damage to tyres and tubes unless the vehicle is damaged at the same time.
+  - Any accidental loss or damage suffered whilst the insured or any person driving the vehicle with the knowledge and consent of the insured is under the influence of intoxicating liquor or drugs.
+  - Driving without a valid driving license.

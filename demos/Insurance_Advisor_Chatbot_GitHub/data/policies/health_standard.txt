@@ -1,0 +1,18 @@
+Policy: Arogya Sanjeevani Standard Health Policy
+Company: SecureLife Insurance
+
+1. Coverage Details:
+- This policy covers hospitalization expenses for illness or injury.
+- Room rent is covered up to 2% of sum insured per day (max Rs. 5000).
+- ICU expenses are covered up to 5% of sum insured per day (max Rs. 10000).
+- AYUSH Treatment: Expenses incurred for inpatient care treatment under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems of medicines are covered up to 100% of Sum Insured.
+
+2. Specific Covers:
+- Cataract treatment is covered up to 25% of sum insured or Rs. 40,000, whichever is lower, per eye.
+- Pre-hospitalization expenses are covered for 30 days prior to admission.
+- Post-hospitalization expenses are covered for 60 days after discharge.
+
+3. Exclusions:
+- Dental treatment or surgery of any kind unless requiring hospitalization due to an accident.
+- Cosmetic or plastic surgery unless required due to injury or accident.
+- Rest cure, rehabilitation, and respite care.

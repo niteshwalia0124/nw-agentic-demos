@@ -15,7 +15,7 @@ from google.cloud import firestore
 from mcp.server.fastmcp import FastMCP
 from mcp.server.transport_security import TransportSecuritySettings
 
-PROJECT_ID = os.getenv("GCP_PROJECT", "butterfly-987")
+PROJECT_ID = os.getenv("GCP_PROJECT", "YOUR_PROJECT_ID")
 DATABASE_ID = os.getenv("FIRESTORE_DB", "insurance-advisor")
 
 db = firestore.Client(project=PROJECT_ID, database=DATABASE_ID)

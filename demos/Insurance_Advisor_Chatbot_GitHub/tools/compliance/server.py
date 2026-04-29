@@ -14,7 +14,7 @@ from google.cloud import bigquery
 from mcp.server.fastmcp import FastMCP
 from mcp.server.transport_security import TransportSecuritySettings
 
-PROJECT_ID = os.getenv("GCP_PROJECT", "butterfly-987")
+PROJECT_ID = os.getenv("GCP_PROJECT", "YOUR_PROJECT_ID")
 DATASET_ID = os.getenv("BQ_DATASET", "insurance_compliance")
 
 bq_client = bigquery.Client(project=PROJECT_ID)

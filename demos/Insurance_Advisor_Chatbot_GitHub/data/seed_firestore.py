@@ -1,9 +1,7 @@
-"""Seed the Firestore 'insurance-advisor' database with customer, policy, and product data."""
+import os
 
-from google.cloud import firestore
-
-PROJECT_ID = "butterfly-987"
-DATABASE_ID = "insurance-advisor"
+PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "YOUR_PROJECT_ID")
+DATABASE_ID = os.environ.get("FIRESTORE_DB", "insurance-advisor")
 
 db = firestore.Client(project=PROJECT_ID, database=DATABASE_ID)
 

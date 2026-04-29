@@ -9,10 +9,13 @@ Usage:
 
 from google.cloud import bigquery
 
-PROJECT_ID = "butterfly-987"
-DATASET_ID = "insurance_compliance"
+import os
+
+PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "YOUR_PROJECT_ID")
+DATASET_ID = os.environ.get("BQ_DATASET", "insurance_compliance")
 
 client = bigquery.Client(project=PROJECT_ID)
+
 
 
 def create_and_load_state_regulations():

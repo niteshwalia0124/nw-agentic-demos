@@ -11,13 +11,15 @@ import sqlalchemy
 from google.cloud.sql.connector import Connector
 
 
-PROJECT_ID = "butterfly-987"
-REGION = "us-central1"
-INSTANCE_NAME = "finserve-knowledge-engine-2"
+import os
+
+PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "YOUR_PROJECT_ID")
+REGION = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
+INSTANCE_NAME = os.environ.get("CLOUD_SQL_INSTANCE", "YOUR_INSTANCE_NAME")
 INSTANCE_CONNECTION_NAME = f"{PROJECT_ID}:{REGION}:{INSTANCE_NAME}"
-DB_NAME = "insurance_claims"
-DB_USER = "claims_user"
-DB_PASS = "ClaimsDb2024!"
+DB_NAME = os.environ.get("CLOUD_SQL_DB", "insurance_claims")
+DB_USER = os.environ.get("CLOUD_SQL_USER", "claims_user")
+DB_PASS = os.environ.get("CLOUD_SQL_PASS", "YOUR_DB_PASSWORD")
 
 
 def get_engine():

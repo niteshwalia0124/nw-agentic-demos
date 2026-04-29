@@ -15,7 +15,7 @@ from google.cloud.sql.connector import Connector
 from mcp.server.fastmcp import FastMCP
 from mcp.server.transport_security import TransportSecuritySettings
 
-PROJECT_ID = os.getenv("GCP_PROJECT", "butterfly-987")
+PROJECT_ID = os.getenv("GCP_PROJECT", "YOUR_PROJECT_ID")
 REGION = os.getenv("CLOUD_SQL_REGION", "us-central1")
 INSTANCE_NAME = os.getenv("CLOUD_SQL_INSTANCE", "finserve-knowledge-engine-2")
 DB_NAME = os.getenv("CLOUD_SQL_DB", "insurance_claims")

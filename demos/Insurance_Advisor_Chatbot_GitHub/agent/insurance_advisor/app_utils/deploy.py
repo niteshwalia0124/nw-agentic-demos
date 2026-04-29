@@ -53,7 +53,7 @@ def deploy_agent_engine_app() -> agent_engines.AgentEngine:
     print("🚀 Starting Agent Engine deployment...")
 
     # Step 1: Configure the project and bucket options
-    PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "butterfly-987")
+    PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "YOUR_PROJECT_ID")
     LOCATION = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
     STAGING_BUCKET = f"{PROJECT_ID}-agent-engine-staging"
 

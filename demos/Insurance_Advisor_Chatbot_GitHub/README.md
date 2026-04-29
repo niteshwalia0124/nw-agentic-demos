@@ -8,30 +8,7 @@ A premium, enterprise-grade multi-agent AI insurance advisory platform built usi
 
 The Insurance Advisor leverages a decoupled, modular architecture where the core **Orchestration Agent** manages user conversations and delegates specialized tasks to specific **Specialist Agents** using the Agent Gateway.
 
-```text
-┌────────────────────────────────────────────────────────┐
-│        AGENT PLATFORM / AGENT RUNTIME (VERTEX AI)      │
-│                                                        │
-│                ┌─────────────────────┐                 │
-│                │ Orchestration Agent │                 │
-│                └──────────┬──────────┘                 │
-│       ┌───────────────────┼───────────────────┐        │
-│       ▼                   ▼                   ▼        │
-│┌────────────┐      ┌─────────────┐     ┌──────────────┐│
-││Policy Agent│      │Claims Agent │     │ Risk Agent   ││
-│└──────┬─────┘      └──────┬──────┘     └──────┬───────┘│
-└───────┼───────────────────┼───────────────────┼────────┘
-        │ (Agent Registry)  │                   │
-        ▼                   ▼                   ▼
-┌──────────────┐     ┌──────────────┐    ┌───────────────┐
-│ Customer/RAG │     │ Claims MCP   │    │ Risk & Premium│
-│ MCP Service  │     │ Service      │    │ MCP Service   │
-└──────┬───────┘     └──────┬───────┘    └──────┬────────┘
-       ▼                    ▼                   ▼
-┌──────────────┐     ┌──────────────┐    ┌───────────────┐
-│  Firestore   │     │  Cloud SQL   │    │   BigQuery    │
-└──────────────┘     └──────────────┘    └───────────────┘
-```
+![Architecture of the Multi-Agent Insurance AI Assistant](assets/architecture.png)
 
 ---
 

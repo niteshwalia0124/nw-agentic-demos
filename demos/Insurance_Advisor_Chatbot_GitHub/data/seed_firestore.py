@@ -10,7 +10,7 @@ db = firestore.Client(project=PROJECT_ID, database=DATABASE_ID)
 CUSTOMERS = {
     "CUST-1001": {
         "customer_id": "CUST-1001",
-        "name": "Nitesh Walia",
+        "name": "Rajesh Sharma",
         "age": 35,
         "gender": "male",
         "marital_status": "married",
@@ -30,9 +30,9 @@ CUSTOMERS = {
     },
     "CUST-1002": {
         "customer_id": "CUST-1002",
-        "name": "Ashish Kamble",
+        "name": "Priya Patel",
         "age": 28,
-        "gender": "male",
+        "gender": "female",
         "marital_status": "single",
         "dependents": 0,
         "occupation": "marketing_manager",
@@ -50,7 +50,7 @@ CUSTOMERS = {
     },
     "CUST-1003": {
         "customer_id": "CUST-1003",
-        "name": "Devesh Sati",
+        "name": "Amit Singh",
         "age": 62,
         "gender": "male",
         "marital_status": "married",
@@ -70,9 +70,9 @@ CUSTOMERS = {
     },
     "CUST-1004": {
         "customer_id": "CUST-1004",
-        "name": "Sourabh Jain",
+        "name": "Anjali Iyer",
         "age": 42,
-        "gender": "male",
+        "gender": "female",
         "marital_status": "married",
         "dependents": 3,
         "occupation": "small_business_owner",
@@ -90,7 +90,7 @@ CUSTOMERS = {
     },
     "CUST-1005": {
         "customer_id": "CUST-1005",
-        "name": "Ved Prakash",
+        "name": "Vikram Reddy",
         "age": 22,
         "gender": "male",
         "marital_status": "single",

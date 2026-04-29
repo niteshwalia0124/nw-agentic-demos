@@ -1,6 +1,0 @@
-mcp[cli]>=1.9.0
-uvicorn>=0.30.0
-starlette>=0.38.0
-cloud-sql-python-connector[pg8000]>=1.20.0
-sqlalchemy>=2.0.0
-google-cloud-secret-manager>=2.0.0

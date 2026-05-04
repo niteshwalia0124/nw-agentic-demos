@@ -1,4 +1,4 @@
-# 🛡️ Demo Insurance AI Assistant Chatbot
+# 🛡️ Insurance AI Advisor
 
 A premium, enterprise-grade multi-agent AI insurance advisory platform built using **Google's Agent Development Kit (ADK)**. It orchestrates multiple specialist sub-agents via the **Google Cloud Agent Platform (Agent Runtime)** and accesses real-time data tools using custom **Model Context Protocol (MCP)** servers over the **Agent Registry**.
 
